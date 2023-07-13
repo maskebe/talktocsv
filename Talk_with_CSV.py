@@ -1,3 +1,5 @@
+# Import libraries
+
 import os
 from langchain import OpenAI
 from langchain.agents import create_pandas_dataframe_agent
@@ -6,7 +8,7 @@ from dotenv import load_dotenv
 import json
 import streamlit as st
 
-
+# API action
 load_dotenv()
 openai_api_key = os.getenv("OPENAI_API_KEY")
 
