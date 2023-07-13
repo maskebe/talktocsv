@@ -1,5 +1,5 @@
 import os
-from langchain import OpenAI, HuggingFaceHub, LLMChain, PromptTemplate
+from langchain import OpenAI
 from langchain.agents import create_pandas_dataframe_agent
 import pandas as pd
 from dotenv import load_dotenv
@@ -8,20 +8,13 @@ import streamlit as st
 
 
 load_dotenv()
-openai_key = os.getenv("OPENAI_API_KEY")
+openai_api_key = os.getenv("OPENAI_API_KEY")
 
-os.environ["HUGGINGFACEHUB_API_TOKEN"] = "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"
-template = """ Question : {question}
-Answer : lets think step by step
-"""
-#prompt = PromptTemplate(template = template, input_variables = ['question'])
-#llm = LLMChain(prompt = prompt, 
-llm = HuggingFaceHub(repo_id = "google/flan-t5-xl", model_kwargs = {"temperature" : 0, "max_length" : 64})
+
 def csv_tool(filename: str):
 
     df = pd.read_csv(filename)
-    #return create_pandas_dataframe_agent(OpenAI(temperature=0), df, verbose=True)
-    return create_pandas_dataframe_agent(llm, df, verbose=True)
+    return create_pandas_dataframe_agent(OpenAI(temperature=0), df, verbose=True)
 
 
 def ask_agent(agent, query):
