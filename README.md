@@ -15,18 +15,18 @@ The methods created in this project are :
 To use this app :
 1. Install python;
 2. Install the required libraries:</br>
-   ```pip install langchain==0.0.146 , python-dotenv==1.0.0 , streamlit==1.22.0 , openai==0.27.7 , tabulate==0.9.0```
-3. Set a environment variable called OPENAI_API_KEY with your own API Key avalailable [here](https://elephas.app/blog/how-to-get-chatgpt-api-key-clh93ii2e1642073tpacu6w934j)
-   ```set OPENAI_API_KEY=<YOUR_OWN_API_KEY>```
-4. Execute the following command to launch streamlit :
-   ```streamlit run Talk_with_csv.py```
+   ```pip install langchain==0.0.146 , python-dotenv==1.0.0 , streamlit==1.22.0 , openai==0.27.7 , tabulate==0.9.0```</br>
+3. Set a environment variable called OPENAI_API_KEY with your own API Key avalailable [here](https://elephas.app/blog/how-to-get-chatgpt-api-key-clh93ii2e1642073tpacu6w934j)</br>
+   ```set OPENAI_API_KEY=<YOUR_OWN_API_KEY>```</br>
+4. Execute the following command to launch streamlit :</br>
+   ```streamlit run Talk_with_csv.py```</br>
 5. Load a CSV file and ask questions in natural language
-     The file used for the test is on [github](https://github.com/tarikkaoutar/Talk_with_CSV).
+     The file used for the test is on [github](https://github.com/tarikkaoutar/Talk_with_CSV).</br>
    Ex:
-   * Which Products have the highest order?
-   * Tabulate the first 5 Products Include the Products and Order columns only?
-   * Create a line graph on the first 5 products. use the Products as the column and Orders as a data values
-   * Create a bar graph on the first 5 products. use the Products as the column and Orders as a data values
+   * Which Products have the highest order?</br>
+   * Tabulate the first 5 Products Include the Products and Order columns only?</br>
+   * Create a line graph on the first 5 products. use the Products as the column and Orders as a data values.</br>
+   * Create a bar graph on the first 5 products. use the Products as the column and Orders as a data values.</br>
   
      
 </br>This project is based on the tutorial found at https://levelup.gitconnected.com/talk-to-your-csv-how-to-visualize-your-data-with-langchain-and-streamlit-5cb8a0db87e0
