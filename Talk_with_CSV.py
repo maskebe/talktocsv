@@ -5,6 +5,7 @@ import pandas as pd
 from dotenv import load_dotenv
 import json
 import streamlit as st
+from deep_translator import GoogleTranslator # pip install -U deep-translator
 
 
 load_dotenv()
@@ -79,6 +80,9 @@ def decode_response(response: str) -> dict:
     """
     return json.loads(response)
 
+def translate(text):
+    translated = GoogleTranslator(source='auto', target='fr').translate(text)
+    return translated
 
 def write_answer(response_dict: dict):
     """
@@ -93,7 +97,7 @@ def write_answer(response_dict: dict):
 
     # Check if the response is an answer.
     if "answer" in response_dict:
-        st.write(response_dict["answer"])
+        st.write(translate(response_dict["answer"]))
 
     # Check if the response is a bar chart.
     # Check if the response is a bar chart.
